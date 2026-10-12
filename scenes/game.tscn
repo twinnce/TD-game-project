@@ -15,15 +15,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_type_variation = &"ContainerLayout"
 
 [node name="GameArea" type="PanelContainer" parent="HBoxContainer" unique_id=2125283408]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer/GameArea" unique_id=1033460337]
+[node name="Label" type="Label" parent="HBoxContainer/GameArea" unique_id=1698156212]
 layout_mode = 2
-color = Color(1, 0.49019608, 0.56078434, 1)
+text = "fsdkjfhsdjhfj hsdjfhsdkfhhs kjsdhfhsdjkdfhsdf"
 
 [node name="RightPanel" type="PanelContainer" parent="HBoxContainer" unique_id=634739523]
 custom_minimum_size = Vector2(480, 0)
 layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/RightPanel" unique_id=651475567]
+layout_mode = 2
+text = "fsdfsd gdsg df gfdgfdgdsgfdg mgfndjkgdfkjhg djghjfdg
+jgdfhjghdfgh
+
+gjhdfkjghdfjhgjkfd
+
+jkfdhgkjdfhkgjhfdjkg fjhgjkfdhg
+
+gdfjkhgfd"
