@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="TD-game-project"
-run/main_scene="uid://cc5iy2sa0lk7u"
+run/main_scene="uid://b2wplxbib37hv"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout=""
 
 [display]
 
@@ -23,10 +27,6 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-
-[gui]
-
-theme/custom="uid://cmkri3gg0uraq"
 
 [physics]
 

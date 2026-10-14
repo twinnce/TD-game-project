@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://b2wplxbib37hv"]
+
+[ext_resource type="Theme" uid="uid://dqedp1g3a7qdk" path="res://assets/ui/ui_theme.tres" id="1_oy5cy"]
+[ext_resource type="Script" uid="uid://3bpe6uv8ysx4" path="res://assets/ui/play_button.gd" id="2_73vv1"]
+[ext_resource type="AudioStream" uid="uid://dmfm66xlktjhe" path="res://assets/sfx/hover_button.ogg" id="3_5so4o"]
+[ext_resource type="Script" uid="uid://b4rl2s0krgixg" path="res://assets/ui/options_button.gd" id="3_ywjci"]
+[ext_resource type="Script" uid="uid://cs3drf6wiukcp" path="res://assets/ui/quit_button.gd" id="4_on311"]
+[ext_resource type="AudioStream" uid="uid://curfw0dicil5t" path="res://assets/sfx/pressed_button.ogg" id="6_ywjci"]
+
+[sub_resource type="GDScript" id="GDScript_if0nf"]
+
+[node name="StartMenu" type="Control" unique_id=1707648329]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_if0nf")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=810125419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_oy5cy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1756793045]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1464641253]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/VBoxContainer" unique_id=1208848683]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="NameGame" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer/VBoxContainer" unique_id=1526148540]
+layout_mode = 2
+theme = ExtResource("1_oy5cy")
+theme_override_font_sizes/font_size = 90
+text = "* PROJECT \"ALPHA_TD\" *"
+horizontal_alignment = 1
+
+[node name="VersionGame" type="Label" parent="PanelContainer/VBoxContainer/VBoxContainer/VBoxContainer" unique_id=415829128]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "ver: 0.0.1_alpha"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=33952501]
+custom_minimum_size = Vector2(240, 0)
+custom_maximum_size = Vector2(384, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 2.0
+theme_override_constants/separation = 8
+
+[node name="PlayButton" type="Button" parent="PanelContainer/VBoxContainer/VBoxContainer2" unique_id=1678555902]
+layout_mode = 2
+size_flags_vertical = 4
+text = "ИГРАТЬ"
+script = ExtResource("2_73vv1")
+
+[node name="OptionsButton" type="Button" parent="PanelContainer/VBoxContainer/VBoxContainer2" unique_id=1801805328]
+layout_mode = 2
+size_flags_vertical = 4
+text = "НАСТРОЙКИ"
+script = ExtResource("3_ywjci")
+
+[node name="QuitButton" type="Button" parent="PanelContainer/VBoxContainer/VBoxContainer2" unique_id=379993967]
+layout_mode = 2
+size_flags_vertical = 4
+text = "ВЫЙТИ"
+script = ExtResource("4_on311")
+
+[node name="HoverButtonPlayer" type="AudioStreamPlayer" parent="." unique_id=1342364547]
+unique_name_in_owner = true
+stream = ExtResource("3_5so4o")
+bus = &"SFX"
+
+[node name="PressedButtonPlayer" type="AudioStreamPlayer" parent="." unique_id=1625642735]
+unique_name_in_owner = true
+stream = ExtResource("6_ywjci")
+bus = &"SFX"
