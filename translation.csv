@@ -1,0 +1,10 @@
+keys,en,ru
+UI_PLAY_BUTTON,PLAY,ИГРАТЬ
+UI_OPTIONS_BUTTON,OPTIONS,НАСТРОЙКИ
+UI_QUIT_BUTTON,QUIT,ВЫЙТИ
+UI_BACK_BUTTON,BACK,НАЗАД
+UI_APPLY_BUTTON,APPLY,ПРИНЯТЬ
+UI_LANGUAGE,Language,Язык
+UI_FULLSCREEN,Fullscreen,Полный экран
+UI_WINDOWED,Windowed,В окне
+UI_BORDERLESS_WINDOW,Borderless window,В окне без рамки

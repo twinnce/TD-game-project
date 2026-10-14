@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TD-game-project"
-run/main_scene="uid://b2wplxbib37hv"
+run/main_scene="uid://dfytc1k2almax"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -27,6 +27,13 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[internationalization]
+
+locale/translation_remaps={}
+locale/translations=PackedStringArray("res://translation.en.translation", "res://translation.ru.translation")
+locale/locale_filter_mode=0
+locale/country_filter=["RU"]
 
 [physics]
 
