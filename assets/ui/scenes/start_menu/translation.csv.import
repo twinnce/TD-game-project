@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bcuk5j2ib7mf7"
+
+[deps]
+
+files=["res://assets/ui/scenes/start_menu/translation.en.translation", "res://assets/ui/scenes/start_menu/translation.ru.translation"]
+
+source_file="res://assets/ui/scenes/start_menu/translation.csv"
+dest_files=["res://assets/ui/scenes/start_menu/translation.en.translation", "res://assets/ui/scenes/start_menu/translation.ru.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout=""
 
+[autoload]
+
+LocalizationManager="*uid://uwfsw5ecw8xa"
+
 [display]
 
 window/size/viewport_width=1920

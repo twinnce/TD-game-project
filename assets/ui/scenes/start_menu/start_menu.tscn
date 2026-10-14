@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dfytc1k2almax"]
 
-[ext_resource type="Script" uid="uid://ddyn8epjjotlw" path="res://assets/ui/scenes/start_menu/start_menu.gd" id="1_hdwj3"]
 [ext_resource type="Theme" uid="uid://dqedp1g3a7qdk" path="res://assets/ui/ui_theme.tres" id="1_m0muh"]
 [ext_resource type="Script" uid="uid://3bpe6uv8ysx4" path="res://assets/ui/scenes/start_menu/play_button.gd" id="2_hdwj3"]
 [ext_resource type="Script" uid="uid://b4rl2s0krgixg" path="res://assets/ui/scenes/start_menu/options_button.gd" id="3_4xcls"]
@@ -15,7 +14,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hdwj3")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=810125419]
 layout_mode = 1
@@ -66,19 +64,19 @@ theme_override_constants/separation = 8
 [node name="PlayButton" type="Button" parent="PanelContainer/VBoxContainer/VBoxContainer2" unique_id=1678555902]
 layout_mode = 2
 size_flags_vertical = 4
-text = "UI_PLAY_BUTTON"
+text = "UI_PLAY"
 script = ExtResource("2_hdwj3")
 
 [node name="OptionsButton" type="Button" parent="PanelContainer/VBoxContainer/VBoxContainer2" unique_id=1801805328]
 layout_mode = 2
 size_flags_vertical = 4
-text = "UI_OPTIONS_BUTTON"
+text = "UI_OPTIONS"
 script = ExtResource("3_4xcls")
 
 [node name="QuitButton" type="Button" parent="PanelContainer/VBoxContainer/VBoxContainer2" unique_id=379993967]
 layout_mode = 2
 size_flags_vertical = 4
-text = "UI_QUIT_BUTTON"
+text = "UI_QUIT"
 script = ExtResource("4_n7kuc")
 
 [node name="HoverButtonPlayer" type="AudioStreamPlayer" parent="." unique_id=1342364547]

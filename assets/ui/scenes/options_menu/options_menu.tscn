@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://bxllgemk84k52"]
+
+[ext_resource type="Theme" uid="uid://dqedp1g3a7qdk" path="res://assets/ui/ui_theme.tres" id="1_2ify2"]
+[ext_resource type="Script" uid="uid://cifntrxajbwpd" path="res://assets/ui/scenes/options_menu/language_selector.gd" id="2_3o171"]
+[ext_resource type="Script" uid="uid://b7j73ku7rkfjk" path="res://assets/ui/scenes/options_menu/back_button.gd" id="2_sxc3j"]
+[ext_resource type="AudioStream" uid="uid://dmfm66xlktjhe" path="res://assets/sfx/hover_button.ogg" id="3_h3idm"]
+[ext_resource type="Script" uid="uid://b8yg3d3rxyupn" path="res://assets/ui/scenes/options_menu/display_mode_selector.gd" id="3_p2lue"]
+[ext_resource type="AudioStream" uid="uid://curfw0dicil5t" path="res://assets/sfx/pressed_button.ogg" id="4_3o171"]
+
+[node name="OptionsMenu" type="Control" unique_id=134669670]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2ify2")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1369576229]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=298679328]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="PanelContainer/VBoxContainer" unique_id=840003728]
+layout_mode = 2
+size_flags_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 16)
+theme_override_font_sizes/font_size = 64
+text = "UI_OPTIONS"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1526342916]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 10.0
+theme_override_constants/separation = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=782488449]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 8
+
+[node name="Language" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1419888680]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "UI_LANGUAGE"
+vertical_alignment = 1
+
+[node name="DisplayMode" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=672171106]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "UI_DISPLAY_MODE"
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer" unique_id=1496117210]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 8
+
+[node name="LanguageSelector" type="HBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=3194869]
+layout_mode = 2
+script = ExtResource("2_3o171")
+
+[node name="PrevButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2/LanguageSelector" unique_id=1595211171]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "<"
+
+[node name="LanguageLabel" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2/LanguageSelector" unique_id=99481513]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 24
+text = "UI_LANGUAGE"
+
+[node name="NextButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2/LanguageSelector" unique_id=190925893]
+layout_mode = 2
+size_flags_horizontal = 8
+text = ">"
+
+[node name="DisplayModeSelector" type="HBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=371922564]
+layout_mode = 2
+script = ExtResource("3_p2lue")
+
+[node name="PrevButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2/DisplayModeSelector" unique_id=1364954001]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "<"
+
+[node name="DisplayModeLabel" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2/DisplayModeSelector" unique_id=319512082]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_font_sizes/font_size = 24
+text = "UI_DISPLAY_MODE"
+
+[node name="NextButton" type="Button" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer2/DisplayModeSelector" unique_id=930948591]
+layout_mode = 2
+size_flags_horizontal = 8
+text = ">"
+
+[node name="BackButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1240247727]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "UI_BACK"
+script = ExtResource("2_sxc3j")
+
+[node name="HoverButtonPlayer" type="AudioStreamPlayer" parent="." unique_id=771235059]
+unique_name_in_owner = true
+stream = ExtResource("3_h3idm")
+bus = &"SFX"
+
+[node name="PressedButtonPlayer" type="AudioStreamPlayer" parent="." unique_id=207804840]
+unique_name_in_owner = true
+stream = ExtResource("4_3o171")
+bus = &"SFX"
